@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Custom Music player Webapp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a custom music player webapp project created with ReactJs and tailwind css.
+
 
 ## Available Scripts
 
