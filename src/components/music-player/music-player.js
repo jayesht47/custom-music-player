@@ -3,6 +3,7 @@ import ProgressBar from "../progress-bar/progress-bar";
 import { ReactComponent as LikeOnIcon } from "../../icons/like_on.svg";
 import { ReactComponent as LikeOffIcon } from "../../icons/like_off.svg";
 import { ReactComponent as VolDownIcon } from "../../icons/volume_down.svg";
+import { ReactComponent as PlayListAddIcon } from "../../icons/playlist_add.svg";
 import { useState } from "react";
 
 const MusicPlayer = () => {
@@ -44,10 +45,11 @@ const MusicPlayer = () => {
           {liked && (
             <LikeOnIcon
               onClick={likeClickHandler}
-              className="self-center cursor-pointer"
+              className="fill-orange-400 self-center cursor-pointer "
             />
           )}
-          <VolDownIcon />
+          <PlayListAddIcon className="self-center cursor-pointer" />
+          <VolDownIcon className="self-center cursor-pointer" />
           <div className="w-20 self-center">
             <ProgressBar />
           </div>
