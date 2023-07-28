@@ -3,7 +3,9 @@ import MusicPlayer from "./components/music-player/music-player";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex">
+      <div className="h-full">Side Bar</div>
+      <div> Main Page</div>
       <MusicPlayer />
     </div>
   );
