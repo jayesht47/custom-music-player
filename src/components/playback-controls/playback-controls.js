@@ -6,12 +6,14 @@ import { ReactComponent as NextIcon } from "../../icons/skip_next.svg";
 import { ReactComponent as ShuffleOffIcon } from "../../icons/shuffle_off.svg";
 import { ReactComponent as ShuffleOnIcon } from "../../icons/shuffle_on.svg";
 import { ReactComponent as RepeatOnIcon } from "../../icons/repeat_one_on.svg";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { PlayerContext } from "../../store/context";
 
 const PlayBackControls = () => {
   const [isRepeat, setIsRepeat] = useState(false);
   const [isShuffle, setIsShuffle] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const player = useContext(PlayerContext);
 
   const repeatClickHandler = () => {
     setIsRepeat(!isRepeat);
@@ -23,6 +25,7 @@ const PlayBackControls = () => {
 
   const playPauseClickHandler = () => {
     setIsPlaying(!isPlaying);
+    isPlaying ? player.pause() : player.resume();
   };
 
   return (
